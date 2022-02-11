@@ -38,6 +38,12 @@ nav{
 .navbar-brand{
     color: var(--text-color);
 }
-.card-content{
-    
+
+.card{
+    background-color:var(--nav-bg-color);
+}
+
+input[type="text"]{
+    color: var(--text-color);
+    background-color:var(--nav-bg-color);
 }
