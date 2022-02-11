@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
   title = 'desafio';
 }
