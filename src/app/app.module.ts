@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,12 +11,13 @@ import { ListsComponent } from './components/lists/lists.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ListsComponent
+    ListsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

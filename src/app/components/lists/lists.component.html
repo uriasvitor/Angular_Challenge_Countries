@@ -1,28 +1,28 @@
 
 <div class="container">
-        <div class="d-flex justify-content-between mb-3">
+        <div class="d-flex justify-content-between ">
             <div class="search col-md-4"> 
-                <input type="text" class="form-control" placeholder="Have a question? Ask Now"> 
+                <input type="text" class="form-control" placeholder="What a Country"> 
             </div>
-            <div class="search option"> 
-                <input type="text" class="form-control" placeholder="Have a question? Ask Now"> 
+            <div class="search option "> 
+                <input type="text" class="form-control" placeholder="Filter"> 
             </div>
         </div>
 </div>
         
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-                <img src="" />
-                    <div class="card-content">
-                        <h4 class="card-title">
-                            </h4>
-                        <p class="">
-                            Tutorial to make a carousel bootstrap by adding more wonderful effect fadein ...
-                        </p>
-                    </div>
-                    <div class="card-read-more">
-                </div>
+    <div class="row hidden-md-up">
+      <div class="col-md-3" *ngFor="let list of listCountries">
+        <div class="card d-flex" style="width: 16rem;height: 20rem;">
+          <div class="card-block">
+            <img src="{{list.flags?.png}}" style="width: 16rem;height: 10rem;">
+            <h4 class="card-title">{{list.name}}</h4>
+            <p class="card-text p-y-1">Population: {{list.population}}</p>
+            <p class="card-text p-y-1">Region: {{list.region}}</p>
+            <p class="card-text p-y-1">Capital: {{list.capital}}</p>
+          </div> 
         </div>
+      </div>
+    </div>
 </div>
+
