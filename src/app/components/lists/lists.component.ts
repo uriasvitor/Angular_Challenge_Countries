@@ -10,7 +10,11 @@ import { names } from 'src/core/names.model';
 })
 export class ListsComponent implements OnInit {
   listCountries?:CountriesModel[];
-  name?:any;
+  currentList?:CountriesModel;
+  currentIndex = -1;
+
+  public list:boolean = true
+  constructor(private service:apiService) { }
 
   getList(){
     this.service.getAll().subscribe(data=>{
@@ -19,10 +23,16 @@ export class ListsComponent implements OnInit {
     })
   }
 
-  constructor(private service:apiService) { }
-
   ngOnInit(): void {
     this.getList();
+  }
+
+  public getActual(list:CountriesModel,index:number){
+    this.currentList = list;
+    this.currentIndex = index;
+    console.log(this.currentIndex);
+    console.log(this.currentList);
+    this.list = false;
   }
 
 }

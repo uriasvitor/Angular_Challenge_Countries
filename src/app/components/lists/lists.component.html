@@ -1,28 +1,47 @@
 
-<div class="container">
-        <div class="d-flex justify-content-between ">
+<div class="container" *ngIf="list">
+        <div class="row hidden-md-up justify-content-between ">
             <div class="search col-md-4"> 
-                <input type="text" class="form-control" placeholder="What a Country"> 
+              <input type="text" class="form-control" placeholder="What a Country"> 
             </div>
-            <div class="search option "> 
+            <div class="search option col-md-2"> 
                 <input type="text" class="form-control" placeholder="Filter"> 
             </div>
         </div>
+
+        <div class="row hidden-md-up">
+          <div class="col-md-3" *ngFor="let list of listCountries; let i = index ">
+            <div class="card d-flex" style="width: 16rem;height: 20rem;">
+              <div class="card-block"
+              (click)="getActual(list,i)"
+              >
+                <img src="{{list.flags?.png}}" style="width: 16rem;height: 10rem;">
+                <h4 class="card-title">{{list.name}}</h4>
+                <p class="card-text p-y-1">Population: {{list.population}}</p>
+                <p class="card-text p-y-1">Region: {{list.region}}</p>
+                <p class="card-text p-y-1">Capital: {{list.capital}}</p>
+              </div> 
+            </div>
+          </div>
+        </div>
+</div>
+
+<div class="container" *ngIf="!list">
+
+        <div class="details">
+          <div class="col-md-3">
+            <div class="card d-flex" style="width: 16rem;height: 20rem;">
+              <div class="card-block">
+                <img src="{{currentList?.flags?.png}}" style="width: 16rem;height: 10rem;">
+                <h4 class="card-title">{{currentList?.name}}</h4>
+                <p class="card-text p-y-1">Population: {{currentList?.population}}</p>
+                <p class="card-text p-y-1">Region: {{currentList?.region}}</p>
+                <p class="card-text p-y-1">Capital: {{currentList?.capital}}</p>
+              </div> 
+            </div>
+          </div>
+        </div>
 </div>
         
-<div class="container">
-    <div class="row hidden-md-up">
-      <div class="col-md-3" *ngFor="let list of listCountries">
-        <div class="card d-flex" style="width: 16rem;height: 20rem;">
-          <div class="card-block">
-            <img src="{{list.flags?.png}}" style="width: 16rem;height: 10rem;">
-            <h4 class="card-title">{{list.name}}</h4>
-            <p class="card-text p-y-1">Population: {{list.population}}</p>
-            <p class="card-text p-y-1">Region: {{list.region}}</p>
-            <p class="card-text p-y-1">Capital: {{list.capital}}</p>
-          </div> 
-        </div>
-      </div>
-    </div>
-</div>
+
 
