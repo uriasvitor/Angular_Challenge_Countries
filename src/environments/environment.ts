@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  envAdress: 'https://restcountries.com/v2/all'
+  envAdress: 'https://restcountries.com/v2/all',
+  envAdress1: 'https://restcountries.com/v2/name'
 
 };
 
