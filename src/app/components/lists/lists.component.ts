@@ -3,7 +3,6 @@ import { Observable, Subject } from 'rxjs';
 import { CountriesModel } from 'src/core/Contries.model';
 import { liveSearch } from 'src/core/des.model';
 import { apiService } from 'src/core/http.service';
-import { names } from 'src/core/names.model';
 
 @Component({
   selector: 'app-lists',
@@ -29,7 +28,6 @@ export class ListsComponent implements OnInit {
   getList(){
     this.service.getAll().subscribe(data=>{
       this.listCountries = data;
-      console.log(data);
     } )
   }
 
@@ -48,7 +46,7 @@ export class ListsComponent implements OnInit {
   }
 
   public searchName(name:string){
-    if(name ==''){
+    if(name == ''){
       this.noSearching = true;
       this.findNameOr = false
     }else{
