@@ -18,17 +18,27 @@ export class ListsComponent implements OnInit {
   countrieName = '';
   noSearching:Boolean = true;
   findNameOr:Boolean = true;
+  response:Boolean = true
+  
   public search?: Observable<CountriesModel[]>
 
   private subjectSearch: Subject<string> = new Subject<string>()
 
   public list:boolean = true
   constructor(private service:apiService) { }
+  public regions =[
+    "Asia","Europe","Oceania","Africa","Americas"
+  ]
 
   getList(){
     this.service.getAll().subscribe(data=>{
       this.listCountries = data;
-    } )
+      console.log(data)
+    },
+    error =>{
+      console.log(error)
+      this.response = false;
+    })
   }
 
   public findName = this.subjectSearch.pipe(

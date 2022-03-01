@@ -1,20 +1,35 @@
+
+
+
+<div class="error" *ngIf="!response">
+  <p class="text-error">Sorry something's not right</p>
+  <img src="../../../assets/img/roboFeito.png" class="error" style="width: 620px;height: 630px;">
+  
+</div>
+
+<div *ngIf="response">
+
 <div class="container" *ngIf="list">
   <div class="row hidden-md-up justify-content-between ">
     <div class="search col-md-4">
       <input type="text" class="form-control" #searchTerms name="countrieName" placeholder="What a Country"
         (keyup)="searchName(searchTerms.value)">
     </div>
-    <div class="search option col-md-2">
-      <input type="text" class="form-control" placeholder="Filter">
+    <div class="form-group search col-md-2">
+    <select id="inputState" class="form-control">
+      <option disable selected>Filter By Region</option>
+      <option *ngFor="let r of regions">{{r}}</option>
+    </select>
     </div>
   </div>
+  
 <div *ngIf="findNameOr">
   <ng-container *ngIf="(findName|async)as countrieName">
     <div class="row hidden-md-up justify-content-between">
       <div class="col-md-3" *ngFor="let countrieNames of countrieName; let i = index ">
         <div class="card d-flex">
           <div class="card-block" (click)="getAtual(countrieNames,i)">
-            <img src="{{countrieNames.flags?.png}}" class="img-fluid" alt="Responsive image" style="width: 19rem;height: 12rem;">
+            <img src="{{countrieNames.flags?.png}}" class="img-fluid card-img-top" >
             <div class="info">
               <h4 class="card-title">{{countrieNames.name}}</h4>
               <p class="card-text p-y-1">Population: {{countrieNames.population}}</p>
@@ -32,7 +47,7 @@
     <div class="col-md-3" *ngFor="let list of listCountries; let i = index ">
       <div class="card d-flex">
         <div class="card-block" (click)="getAtual(list,i)">
-          <img src="{{list.flags?.png}}" class="img-fluid" alt="Responsive image" style="width: 19rem;height: 12rem;">
+          <img src="{{list.flags?.png}}" class="img-fluid" class="img-fluid card-img-top">
           <div class="info">
             <h4 class="card-title">{{list.name}}</h4>
             <p class="card-text p-y-1">Population: {{list.population}}</p>
@@ -46,13 +61,12 @@
 </div>
 </div>
 
-<div class="container" *ngIf="!list">
+<div class="container" *ngIf="!list" class="details">
 
-  <div class="details">
-    <div class="col-md-3">
-      <div class="card d-flex" style="width: 16rem;height: 20rem;">
+    <div class="col-md-12">
+      <div class="card d-flex" style="width: 36rem;height: 15rem;">
         <div class="card-block">
-          <img src="{{currentList?.flags?.png}}" style="width: 16rem;height: 10rem;">
+          <img src="{{currentList?.flags?.png}}" style="width: 36rem;height: 15rem;">
           <h4 class="card-title">{{currentList?.name}}</h4>
           <p class="card-text p-y-1">Population: {{currentList?.population}}</p>
           <p class="card-text p-y-1">Region: {{currentList?.region}}</p>
