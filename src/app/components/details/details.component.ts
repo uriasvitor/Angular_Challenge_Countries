@@ -23,7 +23,6 @@ export class DetailsComponent implements OnInit {
   public getByName(name:any):void{
     this.service.findByName(name).subscribe(data=>{
       this.currentList = data;
-      console.log(data);
     },
     error =>{
       console.log(error);

@@ -44,7 +44,6 @@ export class ListsComponent implements OnInit {
   selected:number = 1;
 
   selectChange(id:any){
-    console.log(this.selected)
     if(this.selected != 1){
       this.findByRegions()
     }else{
@@ -56,7 +55,6 @@ export class ListsComponent implements OnInit {
     if(this.selected != 0){
       this.service.findByRegion(this.regions[this.selected].name).subscribe(data =>{
       this.regionsList = data
-      console.log(this.regionsList)
     },
     error =>  {
       console.log(error)
