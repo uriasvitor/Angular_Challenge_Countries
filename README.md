@@ -12,7 +12,7 @@
 
 ![ChallengerPhoto_4](https://user-images.githubusercontent.com/81401104/156706500-8e1bf6df-8d47-426c-a8a7-e64747a5da21.png)
 
-### Com tema Dark
+### Com o tema Dark
 
 ![ChallengerPhotoDark_5](https://user-images.githubusercontent.com/81401104/156706512-f168342f-f1ea-425d-91e5-11924569a190.png)
 
