@@ -1,16 +1,27 @@
-# Desafio Photos
+# Angular Challenge Countries site
+
+### Aqui podemos ver o site completo com sistema de Search(Pesquisa) e filter(Filtro de pesquisa)
 
 ![ChallengerPhoto_1](https://user-images.githubusercontent.com/81401104/156706463-480f4b83-feb6-4b1e-8096-35d2549ce30c.png)
+### Foi adicionado também o tema Dark 
+
 
 ![ChallengerPhotoDark_4](https://user-images.githubusercontent.com/81401104/156706467-a7a795f1-86b4-406e-bcf9-4779d846d888.png)
 
+### Pagina de detalhes da card do pais
+
 ![ChallengerPhoto_4](https://user-images.githubusercontent.com/81401104/156706500-8e1bf6df-8d47-426c-a8a7-e64747a5da21.png)
+
+### Com tema Dark
 
 ![ChallengerPhotoDark_5](https://user-images.githubusercontent.com/81401104/156706512-f168342f-f1ea-425d-91e5-11924569a190.png)
 
+### Sistema de Pesquisa por nome do Pais
 ![ChallengerPhoto_3](https://user-images.githubusercontent.com/81401104/156706526-138f7f96-7961-4e55-a299-bc6030e9b387.png)
 
+### Sistema de filtro dos paises baseado na região
 
+![ChallengerPhoto_2](https://user-images.githubusercontent.com/81401104/156706998-46596a2e-c421-4a21-9826-9af88665f200.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7
 
