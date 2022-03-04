@@ -9,9 +9,11 @@ export class CountriesModel{
     capital?:Array<any>;
     altSpellings?:string;
     region?:string;
-    continent?:string;
+    subregion?:string;
     population?:number;
     latlng?:string;
+    numericCode?:string;
+    timezones?:string;
     flags?:{
         png:string,
         svg:string

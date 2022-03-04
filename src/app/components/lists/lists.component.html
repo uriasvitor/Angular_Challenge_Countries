@@ -16,9 +16,8 @@
         (keyup)="searchName(searchTerms.value)">
     </div>
     <div class="form-group search col-md-2">
-    <select id="inputState" class="form-control">
-      <option disable selected>Filter By Region</option>
-      <option *ngFor="let r of regions">{{r}}</option>
+    <select id="inputState" (change)="selectChange($event)" [(ngModel)]="selected" class="form-control">
+      <option [value]="r.id" *ngFor="let r of regions">{{r.name}}</option>
     </select>
     </div>
   </div>
@@ -44,9 +43,9 @@
 </div>
   <div *ngIf="noSearching">
   <div class="row hidden-md-up justify-content-between">
-    <div class="col-md-3" *ngFor="let list of listCountries; let i = index ">
+    <div class="col-md-3" *ngFor="let list of regionsList; let i = index ">
       <div class="card d-flex">
-        <div class="card-block" (click)="getAtual(list,i)">
+        <div class="card-block" (click)="getAtual(list,i)" [routerLink]="['home/lists/details']" >
           <img src="{{list.flags?.png}}" class="img-fluid" class="img-fluid card-img-top">
           <div class="info">
             <h4 class="card-title">{{list.name}}</h4>
@@ -62,17 +61,6 @@
 </div>
 
 <div class="container" *ngIf="!list" class="details">
-
-    <div class="col-md-12">
-      <div class="card d-flex" style="width: 36rem;height: 15rem;">
-        <div class="card-block">
-          <img src="{{currentList?.flags?.png}}" style="width: 36rem;height: 15rem;">
-          <h4 class="card-title">{{currentList?.name}}</h4>
-          <p class="card-text p-y-1">Population: {{currentList?.population}}</p>
-          <p class="card-text p-y-1">Region: {{currentList?.region}}</p>
-          <p class="card-text p-y-1">Capital: {{currentList?.capital}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<app-details></app-details>
 </div>
+  

@@ -10,6 +10,7 @@ import { CountriesModel } from './Contries.model';
 export class apiService{
     private env = environment.envAdress
     private env1 = environment.envAdress1
+    private env2 = environment.envAdress2
     constructor(private http: HttpClient){}
 
     getAll():Observable<CountriesModel[]>{
@@ -19,4 +20,10 @@ export class apiService{
     findByName(name:any):Observable<CountriesModel[]>{
         return this.http.get<CountriesModel[]>(`${this.env1}/${name}`)
     }
+    findByRegion(nameR:any):Observable<CountriesModel[]>{
+        return this.http.get<CountriesModel[]>(`${this.env2}/${nameR}`)
+    }
+    get(id: any): Observable<CountriesModel> {
+        return this.http.get<any>(`${this.env1}/${id}`);
+      }
 }

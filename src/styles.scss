@@ -20,7 +20,7 @@ body {
     background: var(--bkg-color);
 }
   
-h1,p,span,b,h4{
+h1,h2,p,span,b,h4{
     color: var(--text-color);
 }
 button {
@@ -44,6 +44,11 @@ nav{
 }
 
 input[type="text"]{
+    color: var(--text-color);
+    background-color:var(--nav-bg-color);
+}
+
+option,select{
     color: var(--text-color);
     background-color:var(--nav-bg-color);
 }

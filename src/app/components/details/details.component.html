@@ -1,0 +1,18 @@
+<a href=""><i class="bi bi-arrow-left" style="zoom:3.0;margin-left: 10%;"></i></a>
+    <div class="card" *ngFor="let list of currentList">
+      <div class="card-horizontal">
+          <div class="img-square-wrapper">
+              <img src="{{list?.flags?.png}}" class="card-img-top img-fluid">
+          </div>
+          <div class="card-body">
+              <h2 class="card-title">{{list?.name}}</h2>
+              <p class="card-text p-y-1">Population: {{list?.population}}</p>
+              <p class="card-text p-y-1">Region: {{list?.region}}</p>
+              <p class="card-text p-y-1">Capital: {{list?.capital}}</p>
+              <p class="card-text p-y-1">timezones: {{list?.timezones}}</p>
+              <p class="card-text p-y-1">numericCode: {{list?.numericCode}}</p>
+              <p class="card-text p-y-1">subregion: {{list?.subregion}}</p>
+              <p class="card-text p-y-1">callingCodes: {{list?.callingCodes}}</p>
+          </div>
+      </div>
+</div>
