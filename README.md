@@ -1,4 +1,10 @@
 # Angular Challenge Countries site
+![image](https://user-images.githubusercontent.com/81401104/156707098-90651277-61a7-4d7f-bee2-c5523467fcdb.png)
+![image](https://user-images.githubusercontent.com/81401104/156707093-ed66c50d-aadd-4fbe-a568-cc8cae2ad07b.png)
+![image](https://user-images.githubusercontent.com/81401104/156707161-54e4f108-d06d-4465-a326-1189633d7ee5.png)
+![image](https://user-images.githubusercontent.com/81401104/156707109-4c13d216-36a6-40a0-939e-02e049044f58.png)
+![image](https://user-images.githubusercontent.com/81401104/156707120-48352b7e-1d54-4c54-91d7-06b0c1ef8827.png)
+
 
 ### Aqui podemos ver o site completo com sistema de Search(Pesquisa) e filter(Filtro de pesquisa)
 
