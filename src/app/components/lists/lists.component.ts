@@ -24,7 +24,7 @@ export class ListsComponent implements OnInit {
   noSearching:Boolean = true;
   findNameOr:Boolean = true;
   response:Boolean = true
-
+  
   public search?: Observable<CountriesModel[]>
 
   private subjectSearch: Subject<string> = new Subject<string>()

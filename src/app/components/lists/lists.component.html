@@ -1,22 +1,20 @@
-
-
-
 <div class="error" *ngIf="!response">
   <p class="text-error">Sorry something's not right</p>
   <img src="../../../assets/img/roboFeito.png" class="error" style="width: 620px;height: 630px;">
-  
 </div>
 
 <div *ngIf="response">
-
 <div class="container" *ngIf="list">
   <div class="row hidden-md-up justify-content-between ">
     <div class="search col-md-4">
-      <input type="text" class="form-control" #searchTerms name="countrieName" placeholder="What a Country"
-        (keyup)="searchName(searchTerms.value)">
+        <span class="input-group-text bg-transparent">
+          <i class="bi bi-search"></i>
+            <input type="text" class="form-control shadow-none" #searchTerms name="countrieName" placeholder="What a Country ?" (keyup)="searchName(searchTerms.value)">
+        </span>
     </div>
+
     <div class="form-group search col-md-2">
-    <select id="inputState" (change)="selectChange($event)" [(ngModel)]="selected" class="form-control">
+    <select id="inputState" (change)="selectChange($event)" [(ngModel)]="selected" class="form-control shadow-none">
       <option [value]="r.id" *ngFor="let r of regions">{{r.name}}</option>
     </select>
     </div>
@@ -41,6 +39,7 @@
     </div>
   </ng-container>
 </div>
+
   <div *ngIf="noSearching">
   <div class="row hidden-md-up justify-content-between">
     <div class="col-md-3" *ngFor="let list of regionsList; let i = index ">

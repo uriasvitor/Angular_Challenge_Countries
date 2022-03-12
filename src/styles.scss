@@ -15,12 +15,30 @@ body.dark-theme {
     --btn-bg-color: rgb(20, 211, 195);
     --nav-bg-color: #2b3743;
 }
-  
+
 body {
     background: var(--bkg-color);
 }
-  
-h1,h2,p,span,b,h4{
+select option{
+    color: var(--text-color);
+    background-color: var(--bkg-color);
+}
+
+input[type="text"]{
+    color: var(--text-color);
+    background: transparent;
+}
+.form-control{
+    color: var(--text-color);
+    background: var(--bkg-color);
+}
+.form-control:focus, .form-control:active {
+    color: var(--text-color);
+    background: transparent;
+}
+
+
+h1,h2,p,span,b,h4,i{
     color: var(--text-color);
 }
 button {
@@ -40,15 +58,5 @@ nav{
 }
 
 .card{
-    background-color:var(--nav-bg-color);
-}
-
-input[type="text"]{
-    color: var(--text-color);
-    background-color:var(--nav-bg-color);
-}
-
-option,select{
-    color: var(--text-color);
     background-color:var(--nav-bg-color);
 }
