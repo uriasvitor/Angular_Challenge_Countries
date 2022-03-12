@@ -8,11 +8,11 @@
 
 ### Aqui podemos ver o site completo com sistema de Search(Pesquisa) e filter(Filtro de pesquisa)
 
-![ChallengerPhoto_1](https://user-images.githubusercontent.com/81401104/156706463-480f4b83-feb6-4b1e-8096-35d2549ce30c.png)
+![image](https://user-images.githubusercontent.com/81401104/158005506-f64ee700-029b-461d-ba12-affd0caedfd4.png)
 ### Foi adicionado também o tema Dark 
 
 
-![ChallengerPhotoDark_4](https://user-images.githubusercontent.com/81401104/156706467-a7a795f1-86b4-406e-bcf9-4779d846d888.png)
+![image](https://user-images.githubusercontent.com/81401104/158005501-98064bae-349e-4fc4-8861-9f49132eab82.png)
 
 ### Pagina de detalhes da card do pais
 
@@ -20,14 +20,14 @@
 
 ### Com o tema Dark
 
-![ChallengerPhotoDark_5](https://user-images.githubusercontent.com/81401104/156706512-f168342f-f1ea-425d-91e5-11924569a190.png)
+![image](https://user-images.githubusercontent.com/81401104/158005618-c9323b2d-ec49-4f1f-a002-7927c25cefa2.png)
 
 ### Sistema de Pesquisa por nome do Pais
-![ChallengerPhoto_3](https://user-images.githubusercontent.com/81401104/156706526-138f7f96-7961-4e55-a299-bc6030e9b387.png)
+![image](https://user-images.githubusercontent.com/81401104/158005539-d7fe0501-cab6-4076-b84f-01c8fa589250.png)
 
 ### Sistema de filtro dos paises baseado na região
 
-![ChallengerPhoto_2](https://user-images.githubusercontent.com/81401104/156706998-46596a2e-c421-4a21-9826-9af88665f200.png)
+![image](https://user-images.githubusercontent.com/81401104/158005573-3c5c13e7-3ccc-4014-bb5b-54b203b6da65.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7
 
