@@ -8,8 +8,13 @@
       transition: box-shadow .25s; 
 }
 
+
 select.form-control {
   -webkit-appearance: menulist;
+}
+
+#inputState{
+  cursor: url('../../../assets/img/search.svg'),auto;
 }
 
 input[name="countrieName"]{

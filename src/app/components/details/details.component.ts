@@ -19,7 +19,6 @@ export class DetailsComponent implements OnInit {
       this.getByName(this.gettingName);
     })
   }
-
   public getByName(name:any):void{
     this.service.findByName(name).subscribe(data=>{
       this.currentList = data;

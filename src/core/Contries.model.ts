@@ -1,4 +1,3 @@
-import { names } from "./names.model";
 
 export class CountriesModel{
     name?:any;
