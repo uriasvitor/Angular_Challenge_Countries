@@ -9,7 +9,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListsComponent } from './components/lists/lists.component';
 import { DetailsComponent } from './components/details/details.component';
-import { apiService } from 'src/core/http.service';
+import { apiService } from 'src/core/services/http.service';
+import { truncatePipe } from 'src/core/utils/pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { apiService } from 'src/core/http.service';
     HomeComponent,
     ListsComponent,
     DetailsComponent,
+    truncatePipe
   ],
   imports: [
     BrowserModule,

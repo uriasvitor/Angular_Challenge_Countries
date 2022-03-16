@@ -1,9 +1,9 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { CountriesModel } from 'src/core/Contries.model';
-import { liveSearch } from 'src/core/des.model';
-import { apiService } from 'src/core/http.service';
+import { CountriesModel } from 'src/core/models/Contries.model';
+import { liveSearch } from 'src/core/models/des.model';
+import { apiService } from 'src/core/services/http.service';
 
 @Component({
   selector: 'app-lists',

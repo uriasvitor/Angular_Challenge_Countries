@@ -38,11 +38,9 @@ input[type="text"]{
     background: transparent;
 }
 
-
 h1,h2,p,span,b,h4,i{
     color: var(--text-color);
 }
-
 
 button {
     padding: 10px;
@@ -50,6 +48,10 @@ button {
     border-radius: 2px;
     color: var(--btn-txt-color);
     background-color: var(--btn-bg-color);
+}
+
+span{
+    cursor: url('/assets/img/moon.svg'),auto;
 }
 
 nav{

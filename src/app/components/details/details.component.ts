@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
-import { CountriesModel } from 'src/core/Contries.model';
-import { apiService } from 'src/core/http.service';
+import { CountriesModel } from 'src/core/models/Contries.model';
+import { apiService } from 'src/core/services/http.service';
 
 @Component({
   selector: 'app-details',

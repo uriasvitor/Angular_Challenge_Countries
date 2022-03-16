@@ -9,7 +9,10 @@
     <div class="search col-md-4">
         <span class="input-group-text bg-transparent">
           <i class="bi bi-search"></i>
-            <input type="text" class="form-control shadow-none" #searchTerms name="countrieName" placeholder="What a Country ?" (keyup)="searchName(searchTerms.value)">
+            <input type="text" class="form-control shadow-none" 
+            #searchTerms name="countrieName" placeholder="What a Country ?" (keyup)="searchName(searchTerms.value)"
+            autocomplete="off"
+            >
         </span>
     </div>
 
@@ -28,7 +31,7 @@
           <div class="card-block" (click)="getAtual(countrieNames,i)">
             <img src="{{countrieNames.flags?.png}}" class="img-fluid card-img-top" >
             <div class="info">
-              <h4 class="card-title">{{countrieNames.name}}</h4>
+              <h4 class="card-title">{{countrieNames.name | truncate:[20, '...'] }}</h4>
               <p class="card-text p-y-1">Population: {{countrieNames.population}}</p>
               <p class="card-text p-y-1">Region: {{countrieNames.region}}</p>
               <p class="card-text p-y-1">Capital: {{countrieNames.capital}}</p>
@@ -47,7 +50,7 @@
         <div class="card-block" (click)="getAtual(list,i)" [routerLink]="['home/lists/details']" >
           <img src="{{list.flags?.png}}" class="img-fluid" class="img-fluid card-img-top">
           <div class="info">
-            <h4 class="card-title">{{list.name}}</h4>
+            <h4 class="card-title">{{list.name | truncate:[20, '...'] }}</h4>
             <p class="card-text p-y-1">Population: {{list.population}}</p>
             <p class="card-text p-y-1">Region: {{list.region}}</p>
             <p class="card-text p-y-1">Capital: {{list.capital}}</p>
